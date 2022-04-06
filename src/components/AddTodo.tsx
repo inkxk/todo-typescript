@@ -13,8 +13,17 @@ export const AddTodo = ({
     handleSubmitTodo,
 }: AddTodoProps) => {
     return (
-        <form onSubmit={handleSubmitTodo}>
-            <input type="text" name="task" value={task} onChange={handleChange} />
+        <form
+            className="flex justify-between w-full "
+            onSubmit={handleSubmitTodo}
+        >
+            <input
+                type="text"
+                name="task"
+                value={task}
+                className="flex-1 rounded p-2 text-grey-dark mr-2"
+                onChange={handleChange}
+            />
             <button type="submit" aria-label="Add todo">
                 <PlusIcon />
             </button>
